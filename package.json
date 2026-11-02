@@ -1,0 +1,24 @@
+{
+  "name": "js2-pulse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FullDev93/js2-pulse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FullDev93/js2-pulse/issues"
+  },
+  "homepage": "https://github.com/FullDev93/js2-pulse#readme",
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}
