@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register · Pulse</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Pulse</h1>
+      <h2>Register</h2>
+      <form id="register-form">
+        <label>
+          Name
+          <input
+            type="text"
+            name="name"
+            pattern="\w+"
+            title="Letters, numbers and _ only"
+            required
+          />
+        </label>
+        <label>
+          Email
+          <input
+            type="email"
+            name="email"
+            pattern=".+@stud\.noroff\.no"
+            title="Use your @stud.noroff.no email"
+            required
+          />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" minlength="8" required />
+        </label>
+        <button type="submit">Register</button>
+      </form>
+      <p>Already have an account? <a href="index.html">Log in</a></p>
+    </main>
+  </body>
+</html>
