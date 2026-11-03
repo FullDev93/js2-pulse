@@ -1,29 +1,9 @@
-import { API_BASE } from './config.js';
+import { apiRequest } from './request.js';
 
-export async function registerUser(userData) {
-  const response = await fetch(`${API_BASE}/auth/register`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(userData),
-  });
-  const json = await response.json();
-
-  if (!response.ok) {
-    throw new Error(json.errors?.[0]?.message ?? 'Registration failed');
-  }
-  return json.data;
+export function registerUser(userData) {
+  return apiRequest('/auth/register', 'POST', userData);
 }
 
-export async function loginUser(credentials) {
-  const response = await fetch(`${API_BASE}/auth/login`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(credentials),
-  });
-  const json = await response.json();
-
-  if (!response.ok) {
-    throw new Error(json.errors?.[0]?.message ?? 'Login failed');
-  }
-  return json.data;
+export function loginUser(credentials) {
+  return apiRequest('/auth/login', 'POST', credentials);
 }
