@@ -9,3 +9,7 @@ export function searchPosts(query) {
     `/social/posts/search?q=${encodeURIComponent(query)}&_author=true`,
   );
 }
+
+export function getPost(id) {
+  return apiRequest(`/social/posts/${encodeURIComponent(id)}?_author=true`);
+}
