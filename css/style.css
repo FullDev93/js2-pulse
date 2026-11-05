@@ -89,3 +89,13 @@ button {
   width: 100%;
   border-radius: 8px;
 }
+
+.search {
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.search label {
+  flex: 1;
+}
