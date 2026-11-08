@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Post · Pulse</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/pages/post.js"></script>
   </head>
   <body>
+    <header>
+      <nav class="container nav">
+        <a href="feed.html">Feed</a>
+        <a href="profile.html">My profile</a>
+      </nav>
+    </header>
     <main class="container">
-      <h1>Post</h1>
+      <p id="message"></p>
+      <div id="post"></div>
+      <section id="owner-actions" class="card" hidden>
+        <h2>Edit post</h2>
+        <form id="edit-form">
+          <label>
+            Title
+            <input name="title" required />
+          </label>
+          <label>
+            Text
+            <textarea name="body" rows="3"></textarea>
+          </label>
+          <label>
+            Image URL
+            <input type="url" name="mediaUrl" />
+          </label>
+          <label>
+            Image description
+            <input name="mediaAlt" maxlength="120" />
+          </label>
+          <button type="submit">Save changes</button>
+        </form>
+        <button id="delete-button" type="button" class="danger">
+          Delete post
+        </button>
+      </section>
     </main>
   </body>
 </html>

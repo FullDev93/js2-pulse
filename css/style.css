@@ -61,3 +61,45 @@ button {
   font-weight: 600;
   cursor: pointer;
 }
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.card-title {
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.search {
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.search label {
+  flex: 1;
+}
+
+.danger {
+  background: #dc2626;
+}

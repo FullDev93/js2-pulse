@@ -5,3 +5,11 @@ export function saveUser(user) {
 export function getUser() {
   return JSON.parse(localStorage.getItem('user'));
 }
+
+export function requireUser() {
+  const user = getUser();
+  if (!user) {
+    location.href = 'index.html';
+  }
+  return user;
+}
