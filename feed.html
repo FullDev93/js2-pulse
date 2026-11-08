@@ -16,6 +16,26 @@
     </header>
     <main class="container">
       <h1>Feed</h1>
+      <form id="create-form" class="card">
+        <h2>Share something</h2>
+        <label>
+          Title
+          <input name="title" required />
+        </label>
+        <label>
+          Text
+          <textarea name="body" rows="3"></textarea>
+        </label>
+        <label>
+          Image URL
+          <input type="url" name="mediaUrl" />
+        </label>
+        <label>
+          Image description
+          <input name="mediaAlt" maxlength="120" />
+        </label>
+        <button type="submit">Publish</button>
+      </form>
       <form id="search-form" class="search">
         <label>
           Search posts

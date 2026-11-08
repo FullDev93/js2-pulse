@@ -10,6 +10,10 @@ export function searchPosts(query) {
   );
 }
 
+export function createPost(postData) {
+  return apiRequest('/social/posts', 'POST', postData);
+}
+
 export function getPost(id) {
   return apiRequest(`/social/posts/${encodeURIComponent(id)}?_author=true`);
 }
