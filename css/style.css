@@ -99,3 +99,7 @@ button {
 .search label {
   flex: 1;
 }
+
+.danger {
+  background: #dc2626;
+}

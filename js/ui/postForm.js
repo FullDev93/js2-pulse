@@ -10,3 +10,10 @@ export function readPostForm(form) {
       : null,
   };
 }
+
+export function fillPostForm(form, post) {
+  form.elements.title.value = post.title;
+  form.elements.body.value = post.body ?? '';
+  form.elements.mediaUrl.value = post.media?.url ?? '';
+  form.elements.mediaAlt.value = post.media?.alt ?? '';
+}

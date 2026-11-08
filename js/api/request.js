@@ -17,6 +17,9 @@ export async function apiRequest(path, method = 'GET', body) {
     headers,
     body: body ? JSON.stringify(body) : undefined,
   });
+  if (response.status === 204) {
+    return null;
+  }
   const json = await response.json();
 
   if (!response.ok) {

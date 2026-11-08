@@ -17,3 +17,11 @@ export function createPost(postData) {
 export function getPost(id) {
   return apiRequest(`/social/posts/${encodeURIComponent(id)}?_author=true`);
 }
+
+export function updatePost(id, postData) {
+  return apiRequest(`/social/posts/${encodeURIComponent(id)}`, 'PUT', postData);
+}
+
+export function deletePost(id) {
+  return apiRequest(`/social/posts/${encodeURIComponent(id)}`, 'DELETE');
+}

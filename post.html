@@ -17,6 +17,31 @@
     <main class="container">
       <p id="message"></p>
       <div id="post"></div>
+      <section id="owner-actions" class="card" hidden>
+        <h2>Edit post</h2>
+        <form id="edit-form">
+          <label>
+            Title
+            <input name="title" required />
+          </label>
+          <label>
+            Text
+            <textarea name="body" rows="3"></textarea>
+          </label>
+          <label>
+            Image URL
+            <input type="url" name="mediaUrl" />
+          </label>
+          <label>
+            Image description
+            <input name="mediaAlt" maxlength="120" />
+          </label>
+          <button type="submit">Save changes</button>
+        </form>
+        <button id="delete-button" type="button" class="danger">
+          Delete post
+        </button>
+      </section>
     </main>
   </body>
 </html>
