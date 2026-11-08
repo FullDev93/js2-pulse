@@ -11,3 +11,17 @@ export function getProfilePosts(name) {
     `/social/profiles/${encodeURIComponent(name)}/posts?_author=true`,
   );
 }
+
+export function followProfile(name) {
+  return apiRequest(
+    `/social/profiles/${encodeURIComponent(name)}/follow`,
+    'PUT',
+  );
+}
+
+export function unfollowProfile(name) {
+  return apiRequest(
+    `/social/profiles/${encodeURIComponent(name)}/unfollow`,
+    'PUT',
+  );
+}
