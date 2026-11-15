@@ -66,11 +66,6 @@ button {
   cursor: pointer;
 }
 
-.nav {
-  display: flex;
-  gap: 16px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -119,10 +114,6 @@ button {
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-}
-
-.nav button {
-  margin-left: auto;
 }
 
 /* Logo */
@@ -182,4 +173,46 @@ button:disabled {
 
 .secondary-link:hover {
   background: var(--bg);
+}
+
+/* Header and navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.nav .brand {
+  margin-right: 8px;
+}
+
+.nav a:not(.brand) {
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav a:not(.brand):hover,
+.nav a[aria-current='page'] {
+  background: #eef0ff;
+  color: var(--primary);
+}
+
+.nav button {
+  margin-left: auto;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
 }
