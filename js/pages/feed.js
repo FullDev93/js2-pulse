@@ -1,4 +1,4 @@
-import { requireUser } from '../utils/storage.js';
+import { requireUser, logout } from '../utils/storage.js';
 import { getPosts, searchPosts, createPost } from '../api/posts.js';
 import { createPostCard } from '../ui/postCard.js';
 import { readPostForm } from '../ui/postForm.js';
@@ -27,15 +27,21 @@ searchForm.addEventListener('submit', (event) => {
 
 createForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const button = createForm.querySelector('button');
+  button.disabled = true;
   try {
     await createPost(readPostForm(createForm));
     createForm.reset();
     showPosts();
   } catch (error) {
     message.textContent = error.message;
+  } finally {
+    button.disabled = false;
   }
 });
 
 if (requireUser()) {
   showPosts();
 }
+
+document.querySelector('#logout').addEventListener('click', logout);

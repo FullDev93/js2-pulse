@@ -1,4 +1,4 @@
-import { requireUser } from '../utils/storage.js';
+import { requireUser, logout } from '../utils/storage.js';
 import {
   getProfile,
   getProfilePosts,
@@ -56,3 +56,5 @@ followButton.addEventListener('click', async () => {
 if (user) {
   showProfile();
 }
+
+document.querySelector('#logout').addEventListener('click', logout);

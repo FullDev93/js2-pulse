@@ -1,4 +1,4 @@
-import { requireUser } from '../utils/storage.js';
+import { requireUser, logout } from '../utils/storage.js';
 import { getPost, updatePost, deletePost } from '../api/posts.js';
 import { createPostCard } from '../ui/postCard.js';
 import { readPostForm, fillPostForm } from '../ui/postForm.js';
@@ -33,12 +33,16 @@ async function showPost() {
 
 editForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const button = editForm.querySelector('button');
+  button.disabled = true;
   try {
     await updatePost(id, readPostForm(editForm));
     await showPost();
     message.textContent = 'Post updated.';
   } catch (error) {
     message.textContent = error.message;
+  } finally {
+    button.disabled = false;
   }
 });
 
@@ -57,3 +61,5 @@ deleteButton.addEventListener('click', async () => {
 if (user) {
   showPost();
 }
+
+document.querySelector('#logout').addEventListener('click', logout);
