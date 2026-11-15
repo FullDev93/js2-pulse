@@ -1,4 +1,4 @@
-import { requireUser } from '../utils/storage.js';
+import { requireUser, logout } from '../utils/storage.js';
 import { getPosts, searchPosts, createPost } from '../api/posts.js';
 import { createPostCard } from '../ui/postCard.js';
 import { readPostForm } from '../ui/postForm.js';
@@ -43,3 +43,5 @@ createForm.addEventListener('submit', async (event) => {
 if (requireUser()) {
   showPosts();
 }
+
+document.querySelector('#logout').addEventListener('click', logout);

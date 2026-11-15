@@ -1,4 +1,4 @@
-import { requireUser } from '../utils/storage.js';
+import { requireUser, logout } from '../utils/storage.js';
 import { getPost, updatePost, deletePost } from '../api/posts.js';
 import { createPostCard } from '../ui/postCard.js';
 import { readPostForm, fillPostForm } from '../ui/postForm.js';
@@ -61,3 +61,5 @@ deleteButton.addEventListener('click', async () => {
 if (user) {
   showPost();
 }
+
+document.querySelector('#logout').addEventListener('click', logout);
