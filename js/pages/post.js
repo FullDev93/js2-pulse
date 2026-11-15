@@ -33,12 +33,16 @@ async function showPost() {
 
 editForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const button = editForm.querySelector('button');
+  button.disabled = true;
   try {
     await updatePost(id, readPostForm(editForm));
     await showPost();
     message.textContent = 'Post updated.';
   } catch (error) {
     message.textContent = error.message;
+  } finally {
+    button.disabled = false;
   }
 });
 

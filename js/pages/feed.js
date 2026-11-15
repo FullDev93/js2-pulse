@@ -27,12 +27,16 @@ searchForm.addEventListener('submit', (event) => {
 
 createForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const button = createForm.querySelector('button');
+  button.disabled = true;
   try {
     await createPost(readPostForm(createForm));
     createForm.reset();
     showPosts();
   } catch (error) {
     message.textContent = error.message;
+  } finally {
+    button.disabled = false;
   }
 });
 
