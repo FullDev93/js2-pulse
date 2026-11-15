@@ -14,6 +14,9 @@ for the JavaScript 2 course assignment at Noroff. It uses the Noroff API v2.
 - View your own profile and other users' profiles with their posts
 - Follow and unfollow other users
 
+Comment and reaction counts are shown on each post. Commenting and reacting
+are group-work features in the brief and are not part of this individual project.
+
 ## Built with
 
 - HTML and CSS

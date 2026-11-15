@@ -8,22 +8,30 @@
     <script type="module" src="js/pages/login.js"></script>
   </head>
   <body>
-    <main class="container">
-      <h1>Pulse</h1>
-      <h2>Log in</h2>
-      <p id="message"></p>
-      <form id="login-form">
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Password
-          <input type="password" name="password" required />
-        </label>
-        <button type="submit">Log in</button>
-      </form>
-      <p>No account? <a href="register.html">Register</a></p>
+    <main class="container auth">
+      <div class="card">
+        <h1 class="brand">
+          <svg class="brand-mark" viewBox="0 0 24 12" aria-hidden="true">
+            <polyline points="1 6 6 6 8.5 2 12 10 15 4 17 6 23 6" />
+          </svg>
+          Pulse
+        </h1>
+        <h2>Log in</h2>
+        <p id="message"></p>
+        <form id="login-form">
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required />
+          </label>
+          <button type="submit">Log in</button>
+        </form>
+        <p>No account yet?</p>
+        <a class="secondary-link" href="register.html">Create an account</a>
+      </div>
     </main>
   </body>
 </html>

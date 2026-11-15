@@ -66,11 +66,6 @@ button {
   cursor: pointer;
 }
 
-.nav {
-  display: flex;
-  gap: 16px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -121,6 +116,144 @@ button:disabled {
   cursor: not-allowed;
 }
 
+/* Logo */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 14px;
+  fill: none;
+  stroke: #ff6b6b;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Login and register pages */
+.auth {
+  max-width: 420px;
+  padding-top: 10vh;
+}
+
+.auth .brand {
+  justify-content: center;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.auth .brand-mark {
+  width: 40px;
+  height: 20px;
+}
+
+.auth h2,
+.auth p {
+  margin: 0;
+  text-align: center;
+}
+
+.secondary-link {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.secondary-link:hover {
+  background: var(--bg);
+}
+
+/* Header and navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.nav .brand {
+  margin-right: 8px;
+}
+
+.nav a:not(.brand) {
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav a:not(.brand):hover,
+.nav a[aria-current='page'] {
+  background: #eef0ff;
+  color: var(--primary);
+}
+
 .nav button {
   margin-left: auto;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Post card */
+.card {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-author {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-author:hover,
+.card-title:hover {
+  color: var(--primary);
+}
+
+.card-header small,
+.card-footer {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.card-footer {
+  display: flex;
+  gap: 16px;
 }
