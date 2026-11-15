@@ -1,3 +1,8 @@
+/**
+ * Builds a card element for one post.
+ * @param {object} post - A post from the Noroff API, with its author
+ * @returns {HTMLElement} The post card
+ */
 export function createPostCard(post) {
   const card = document.createElement('article');
   card.className = 'card';

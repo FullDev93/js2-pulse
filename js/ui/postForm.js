@@ -1,3 +1,8 @@
+/**
+ * Reads the post form and returns the data the API expects.
+ * @param {HTMLFormElement} form - The create or edit form
+ * @returns {{title: string, body: string, media: object|null}} The post data
+ */
 export function readPostForm(form) {
   const data = new FormData(form);
   const mediaUrl = data.get('mediaUrl').trim();

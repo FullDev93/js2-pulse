@@ -1,6 +1,13 @@
 import { API_BASE, API_KEY } from './config.js';
 import { getUser } from '../utils/storage.js';
 
+/**
+ * Sends a request to the Noroff API with the API key and the user's token.
+ * @param {string} path - The API path, e.g. '/social/posts'
+ * @param {string} [method='GET'] - The HTTP method
+ * @param {object} [body] - Data to send as JSON
+ * @returns {Promise<any>} The data from the API, or null when the response is empty
+ */
 export async function apiRequest(path, method = 'GET', body) {
   const headers = { 'X-Noroff-API-Key': API_KEY };
 
