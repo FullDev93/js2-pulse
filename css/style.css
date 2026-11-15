@@ -109,7 +109,7 @@ button {
   background: #dc2626;
 }
 
-.avatar {
+.card .avatar {
   width: 72px;
   height: 72px;
   border-radius: 50%;
