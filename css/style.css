@@ -216,3 +216,43 @@ button:disabled {
   color: var(--text);
   border: 1px solid var(--border);
 }
+
+/* Post card */
+.card {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-author {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-author:hover,
+.card-title:hover {
+  color: var(--primary);
+}
+
+.card-header small,
+.card-footer {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.card-footer {
+  display: flex;
+  gap: 16px;
+}
